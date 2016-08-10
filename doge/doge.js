@@ -24,7 +24,7 @@ class PlayState {
   create() {
     console.log("play state");
     this.background = this.add.tileSprite(0,0,320,568,"background");
-    this.background.autoScroll(70000,70000);
+    this.background.autoScroll(0,400);
   }
 }
 
