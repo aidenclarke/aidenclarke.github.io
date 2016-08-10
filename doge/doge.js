@@ -12,6 +12,7 @@ class BootState {
 class LoadState {
   preload() {
     console.log("loading");
+    game.load.image('background', 'assets/background.jpg');
   }
 }
 
