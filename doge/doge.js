@@ -89,6 +89,10 @@ class PlayState {
       this.player.x += C.p.speed;
     }
     this.doge.y += 5;
+    
+    if (this.doge.y >= 568) {
+      this.doge = C.doge.starty
+    }
   }
 }
 
