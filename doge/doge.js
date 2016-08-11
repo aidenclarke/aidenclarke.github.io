@@ -17,7 +17,7 @@ var C = {
     "frames": 4,
     "fps": 6,
     "startx": 160,
-    "starty": 500
+    "starty":500
   },
   "doge": {
     "file": "assets/dogething.png",
@@ -27,7 +27,7 @@ var C = {
     "fps": 6,
     "startx": 160,
     "starty": 300,
-    "speed": 1
+    "speed": .5
   }
 }
 
