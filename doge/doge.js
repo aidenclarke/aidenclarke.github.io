@@ -37,7 +37,8 @@ class LoadState {
 class PlayState {
   create() {
     console.log("play state");
-    this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg")
+    this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
+    this.bg.autoScroll(C.bg.xspeed,C.bg.yspeed);
   }
 }
 
