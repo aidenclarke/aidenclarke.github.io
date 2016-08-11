@@ -17,7 +17,7 @@ var C = {
     "frames": 4,
     "fps": 6,
     "startx": 160,
-    "starty":500
+    "starty": 500,
     "speed": 5
   },
   "doge": {
