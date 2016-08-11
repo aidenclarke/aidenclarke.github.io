@@ -26,7 +26,8 @@ var C = {
     "frames": 3,
     "fps": 6,
     "startx": 160,
-    "starty": 300
+    "starty": 300,
+    "speed": 5
   }
 }
 
@@ -58,7 +59,7 @@ class LoadState {
 
 class PlayState {
   create() {
-    this.physics.startSystem(Phaser.Physics.ARCADE);
+    
     
     console.log("play state");
     this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
@@ -70,7 +71,6 @@ class PlayState {
     this.player.scale.set(1.5);
     this.player.animations.add("anim");
     this.player.animations.play("anim",C.p.fps,true);
-    this.physics.enable("player", Phaser.Physics.ARCADE);
     
     this.doge = this.add.sprite(C.doge.startx,C.doge.starty,"doge");
     this.doge.anchor.set(0.5,0.5);
@@ -82,12 +82,6 @@ class PlayState {
     this.cursors = this.input.keyboard.createCursorKeys();
   }
   update() {
-    this.player.body.velocity.x = 0;
-    
-    if(this.cursors.left.isDown)
-    {
-      player.body.velocity.x = 0;
-    }
   }
 }
 
