@@ -1,3 +1,17 @@
+var C = {
+  "game": {
+    "width": 320,
+    "height": 568
+  },
+  "bg": {
+    "width": 320,
+    "height": 568,
+    "xspeed": 0,
+    "yspeed": 500,
+    "file": "assets/background.jpg"
+  }
+}
+
 class BootState {
   preload() {
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -12,7 +26,7 @@ class BootState {
 class LoadState {
   preload() {
     console.log("loading");
-    game.load.image('background', 'assets/background.jpg');
+    game.load.image('bg',C.bg.file);
   }
   create() {
     console.log("loaded");
@@ -23,12 +37,11 @@ class LoadState {
 class PlayState {
   create() {
     console.log("play state");
-    this.background = this.add.tileSprite(0,0,320,568,"background");
-    this.background.autoScroll(0,400);
+    this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg")
   }
 }
 
-var game = new Phaser.Game(320,568);
+var game = new Phaser.Game(C.game.width,C.game.height);
 game.state.add("Boot",BootState);
 game.state.add("Load",LoadState);
 game.state.add("Play",PlayState);
