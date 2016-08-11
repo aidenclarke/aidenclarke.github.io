@@ -12,6 +12,8 @@ var C = {
   }
 }
 
+//-------------------------------------------------------------------------------------------------------
+
 class BootState {
   preload() {
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -41,6 +43,8 @@ class PlayState {
     this.bg.autoScroll(C.bg.xspeed,C.bg.yspeed);
   }
 }
+
+//--------------------------------------------------------------------------------------------------
 
 function restart() {
   game.state.start("Boot");
