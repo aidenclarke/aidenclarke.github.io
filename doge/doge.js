@@ -9,6 +9,12 @@ var C = {
     "xspeed": 0,
     "yspeed": 300,
     "file": "assets/background.jpg"
+  },
+  "p": {
+    "file": "assets/doger.png",
+    "width": 46,
+    "height": 64,
+    "frames": 4
   }
 }
 
@@ -28,7 +34,8 @@ class BootState {
 class LoadState {
   preload() {
     console.log("loading");
-    game.load.image('bg',C.bg.file);
+    this.load.image('bg',C.bg.file);
+    this.load.spritesheet("player",C.p.file,C.p.width,C.p.height,C.p.frames)
   }
   create() {
     console.log("loaded");
