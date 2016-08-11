@@ -91,7 +91,7 @@ class PlayState {
     this.doge.y += 5;
     
     if (this.doge.y >= 568) {
-      this.doge = C.doge.starty
+      this.doge = this.C.doge.starty;
     }
   }
 }
