@@ -18,6 +18,15 @@ var C = {
     "fps": 6,
     "startx": 160,
     "starty": 500
+  },
+  "doge": {
+    "file": "assets/dogething.png",
+    "width": 46,
+    "height": 64,
+    "frames": 3,
+    "fps": 6,
+    "startx:" 160,
+    "starty": 300
   }
 }
 
@@ -39,6 +48,7 @@ class LoadState {
     console.log("loading");
     this.load.image('bg',C.bg.file);
     this.load.spritesheet("player",C.p.file,C.p.width,C.p.height,C.p.frames)
+    this.load.spritesheet("doge",C.p.file,C.p.width,C.p.height,C.p.frames)
   }
   create() {
     console.log("loaded");
@@ -55,6 +65,13 @@ class PlayState {
     this.player = this.add.sprite(C.p.startx,C.p.starty,"player");
     this.player.anchor.set(0.5,0.5);
     this.player.smoothed = false;
+    this.player.scale.set(1.5);
+    this.player.animations.add("anim");
+    this.player.animations.play("anim",C.p.fps,true);
+    
+    this.doge = this.add.sprite(C.p.startx,C.p.starty,"doge");
+    this.doge.anchor.set(0.5,0.5);
+    this.doge.smoothed = false;
     this.player.scale.set(1.5);
     this.player.animations.add("anim");
     this.player.animations.play("anim",C.p.fps,true);
