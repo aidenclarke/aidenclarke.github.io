@@ -14,7 +14,7 @@ var C = {
     "file": "assets/doger.png",
     "width": 46,
     "height": 64,
-    "frames": 4
+    "frames": 4,
     "startx": 160,
     "starty": 500
   }
