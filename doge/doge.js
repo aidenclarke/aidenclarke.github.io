@@ -68,7 +68,7 @@ class PlayState {
     this.player.scale.set(1.5);
     this.player.animations.add("anim");
     this.player.animations.play("anim",C.p.fps,true);
-    this.physics.enable(player, Phaser.Physics.ARCADE);
+    this.physics.enable("player", Phaser.Physics.ARCADE);
     
     this.doge = this.add.sprite(C.doge.startx,C.doge.starty,"doge");
     this.doge.anchor.set(0.5,0.5);
