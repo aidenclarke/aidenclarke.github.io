@@ -15,6 +15,7 @@ var C = {
     "width": 46,
     "height": 64,
     "frames": 4,
+    "fps": 4,
     "startx": 160,
     "starty": 500
   }
@@ -50,10 +51,13 @@ class PlayState {
     console.log("play state");
     this.bg = this.add.tileSprite(0,0,C.bg.width,C.bg.height,"bg");
     this.bg.autoScroll(C.bg.xspeed,C.bg.yspeed);
+    
     this.player = this.add.sprite(C.p.startx,C.p.starty,"player");
     this.player.anchor.set(0.5,0.5);
     this.player.smoothed = false;
     this.player.scale.set(1.5);
+    this.player.animations.add("anim");
+    this.player.animations.play("anim",C.p.fps,true)
   }
 }
 
