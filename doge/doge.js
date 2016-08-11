@@ -15,7 +15,7 @@ var C = {
     "width": 46,
     "height": 64,
     "frames": 4,
-    "fps": 4,
+    "fps": 10,
     "startx": 160,
     "starty": 500
   }
@@ -57,7 +57,7 @@ class PlayState {
     this.player.smoothed = false;
     this.player.scale.set(1.5);
     this.player.animations.add("anim");
-    this.player.animations.play("anim",C.p.fps,true)
+    this.player.animations.play("anim",C.p.fps,true);
   }
 }
 
