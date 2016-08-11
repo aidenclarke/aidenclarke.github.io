@@ -69,12 +69,12 @@ class PlayState {
     this.player.animations.add("anim");
     this.player.animations.play("anim",C.p.fps,true);
     
-    this.doge = this.add.sprite(C.p.startx,C.p.starty,"doge");
+    this.doge = this.add.sprite(C.doge.startx,C.doge.starty,"doge");
     this.doge.anchor.set(0.5,0.5);
     this.doge.smoothed = false;
     this.doge.scale.set(1.5);
     this.doge.animations.add("anim");
-    this.doge.animations.play("anim",C.p.fps,true);
+    this.doge.animations.play("anim",C.doge.fps,true);
   }
 }
 
