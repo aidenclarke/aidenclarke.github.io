@@ -91,7 +91,7 @@ class PlayState {
     this.doge.y += 5;
     
     if (this.doge.y >= 568) {
-      this.doge = this.C.doge.starty;
+      dogerestart();
     }
   }
 }
@@ -100,6 +100,10 @@ class PlayState {
 
 function restart() {
   game.state.start("Boot");
+}
+
+function dogerestart() {
+  this.doge = this.add.sprite(C.doge.startx,C.doge.starty,"doge");
 }
 
 var game = new Phaser.Game(C.game.width,C.game.height);
