@@ -26,7 +26,7 @@ var C = {
     "frames": 3,
     "fps": 6,
     "startx": 160,
-    "starty": 550
+    "starty": 300
   }
 }
 
@@ -48,7 +48,7 @@ class LoadState {
     console.log("loading");
     this.load.image('bg',C.bg.file);
     this.load.spritesheet("player",C.p.file,C.p.width,C.p.height,C.p.frames)
-    this.load.spritesheet("doge",C.p.file,C.p.width,C.p.height,C.p.frames)
+    this.load.spritesheet("doge",C.doge.file,C.doge.width,C.doge.height,C.doge.frames)
   }
   create() {
     console.log("loaded");
