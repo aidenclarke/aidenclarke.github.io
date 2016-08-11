@@ -88,6 +88,7 @@ class PlayState {
     if (this.cursors.right.isDown) {
       this.player.x += C.p.speed;
     }
+    this.doge.y += 5;
   }
 }
 
